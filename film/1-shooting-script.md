@@ -1,17 +1,23 @@
 # Abu Bakr – Mirësia e Fshehtë
-### Shooting script · ~12 minutes · Albanian voices · English subtitles
+### Shooting script · ~12 minutes · realistic 3D animation · Albanian voices · English subtitles
 
 Based on your doc. Changes from it:
 - Spoken language is **Albanian** (not Arabic), with **English subtitles**.
 - Length is **12:00**: the adhan and the walk to the masjid are added at the start, and every scene has more room.
-- Visual style follows your reference picture: 2D anime, dark rooms lit by warm lamps.
+- Visual style is a realistic cinematic 3D animated film. Your reference picture sets the mood and lighting.
 - Lines I added are marked **[added]**.
 
 ---
 
 ## A. Style block: paste at the start of every image prompt
 
-> 2D hand-painted anime illustration, soft cel shading, muted earth tones, 7th-century Medina, mud-brick walls, palm-trunk beams, straw mats, clay jugs, small oil lamps in wall niches, warm amber lamplight against deep blue night, cinematic 16:9 framing, gentle film grain, calm and emotional mood, no text, no modern objects
+> Cinematic 3D animated feature film, highly realistic, photorealistic textures and lighting, realistic human proportions, detailed fabric, skin and sand, volumetric light and dust, natural shadows, shallow depth of field, 35mm film look, 7th-century Medina, mud-brick walls, palm-trunk beams, straw mats, clay jugs, small oil lamps in wall niches, warm amber lamplight against deep blue night, 16:9, calm and emotional mood, no text, no modern objects
+
+**Animation prompt ending (add to every movement prompt):**
+
+> smooth realistic motion, natural body movement, real-world physics for cloth, fire and dust, cinematic camera, 24 fps, no morphing, no distortion
+
+**Tools that look most realistic:** Google Veo 3 or Kling 2.x for the moving shots (both handle realistic people and light well). Generate the still frame first, then use it as the start image, so characters stay consistent. Your reference picture is now only a guide for the mood and lighting (dark rooms, warm lamps, starry window), not for the drawing style.
 
 ## B. Character sheet: generate these first and reuse them as references
 
@@ -29,7 +35,7 @@ Based on your doc. Changes from it:
 | Voice | Character |
 |---|---|
 | **Narrator** | Calm, deep, older male voice. Slow. |
-| **Light** (the Prophet's ﷺ words) | Soft, warm male voice with a little room echo. Calm and never dramatic. *Option: let the Narrator say these lines as "Dhe i Dërguari i Allahut ﷺ tha: …" if you prefer no one voices him.* |
+| **Narrator (soft)** | The same narrator, quieter and slower, for the Prophet's ﷺ words. He always reports them ("Dhe i Dërguari i Allahut ﷺ tha: …"). Nobody speaks as the Prophet ﷺ. While he speaks, the light glows a little stronger. |
 | **Abu Bakr** | Gentle, quiet, slightly hoarse. |
 | **Umar** | Strong but soft-spoken, deep. |
 | **Woman** | Old, frail, warm. |
@@ -115,15 +121,15 @@ Each shot is about 5–10 seconds. Generate the image, animate it in Kling, Runw
 **Nasheed:** each answer adds one new voice layer, slowly building.
 **Pattern for each question:** the light glows as the question is asked → the camera pans across bowed heads and silent faces looking down → one hand rises at the back, seen from behind (Abu Bakr) → "Unë."
 
-| # | Light says | Answer |
+| # | Narrator (soft) | Answer |
 |---|---|---|
-| 6.1 | "Kush prej jush agjëroi sot?" | Abu Bakr: "Unë." |
-| 6.2 | "Kush prej jush përcolli sot një xhenaze?" | Abu Bakr: "Unë." |
-| 6.3 | "Kush prej jush ushqeu sot një të varfër?" | Abu Bakr: "Unë." |
-| 6.4 | "Kush prej jush vizitoi sot një të sëmurë?" | Abu Bakr: "Unë." |
+| 6.1 | "Dhe i Dërguari i Allahut ﷺ pyeti: 'Kush prej jush agjëroi sot?'" | Abu Bakr: "Unë." |
+| 6.2 | "Pastaj pyeti: 'Kush prej jush përcolli sot një xhenaze?'" | Abu Bakr: "Unë." |
+| 6.3 | "Pastaj pyeti: 'Kush prej jush ushqeu sot një të varfër?'" | Abu Bakr: "Unë." |
+| 6.4 | "Pastaj pyeti: 'Kush prej jush vizitoi sot një të sëmurë?'" | Abu Bakr: "Unë." |
 
 Shot prompts for every question:
-- **a)** The circle from behind, the light at the front glows → light brightens slightly
+- **a)** The circle from behind, the light at the front glows → light brightens slightly while the narrator speaks
 - **b)** Side view of several companions with lowered heads → slow pan
 - **c)** Abu Bakr from behind, raising his hand at the back of the circle → hand rises slowly
 - After 6.2 and 6.3, add a quick memory flash (2 sec, softer colors): Abu Bakr walking behind a funeral procession; Abu Bakr handing bread to a poor man in a doorway.
@@ -137,7 +143,7 @@ Shot prompts for every question:
 | 7.2 | Vision above the circle: eight tall arched gates of light in the sky | Gates slowly open, light pours out |
 | 7.3 | Abu Bakr from behind, head bowed, shoulders shaking softly | Small shoulder movement, a tear falls on the mat (shot from below) |
 
-**Light:** "Këto cilësi nuk bashkohen te një njeri, përveçse ai hyn në Xhennet."
+**Narrator (soft):** "Dhe i Dërguari i Allahut ﷺ tha: 'Këto cilësi nuk bashkohen te një njeri, përveçse ai hyn në Xhennet.'"
 
 ### 8. Umar's heart · 7:20–8:10
 **Nasheed:** slow, questioning, almost a whisper. Colors shift toward cool blue.

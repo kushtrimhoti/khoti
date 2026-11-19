@@ -18,15 +18,15 @@ Paste each line into ElevenLabs (or similar) separately, with the matching voice
 | 20 | 9:50 | Çdo mëngjes. Pa asnjë fjalë. Pa asnjë dëshmitar. | Every morning. Without a word. Without a witness. |
 | 22 | 10:48 | Kaluan vite. Dhe një ditë, Ebu Bekri u kthye te Zoti i tij. | Years passed. And one day, Abu Bakr returned to his Lord. |
 
-## Light
+## Narrator (soft)
 
 | # | Start | Albanian line | Meaning |
 |---|---|---|---|
-| 08 | 4:35 | Kush prej jush agjëroi sot? | Who among you fasted today? |
-| 10 | 5:05 | Kush prej jush përcolli sot një xhenaze? | Who among you followed a funeral today? |
-| 12 | 5:35 | Kush prej jush ushqeu sot një të varfër? | Who among you fed a poor person today? |
-| 14 | 6:05 | Kush prej jush vizitoi sot një të sëmurë? | Who among you visited a sick person today? |
-| 16 | 6:38 | Këto cilësi nuk bashkohen te një njeri, përveçse ai hyn në Xhennet. | These deeds never come together in one person except that he enters Paradise. |
+| 08 | 4:33 | Dhe i Dërguari i Allahut ﷺ pyeti: “Kush prej jush agjëroi sot?” | And the Messenger of Allah ﷺ asked: “Who among you fasted today?” |
+| 10 | 5:03 | Pastaj pyeti: “Kush prej jush përcolli sot një xhenaze?” | Then he asked: “Who among you followed a funeral today?” |
+| 12 | 5:33 | Pastaj pyeti: “Kush prej jush ushqeu sot një të varfër?” | Then he asked: “Who among you fed a poor person today?” |
+| 14 | 6:03 | Pastaj pyeti: “Kush prej jush vizitoi sot një të sëmurë?” | Then he asked: “Who among you visited a sick person today?” |
+| 16 | 6:36 | Dhe i Dërguari i Allahut ﷺ tha: “Këto cilësi nuk bashkohen te një njeri, përveçse ai hyn në Xhennet.” | And the Messenger of Allah ﷺ said: “These deeds never come together in one person except that he enters Paradise.” |
 
 ## Abu Bakr
 

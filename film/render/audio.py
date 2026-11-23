@@ -50,16 +50,16 @@ CUES = [
      "Umar wondered: “What does he do in secret that I do not?”"),
     (478, "nar", "Dhe vendosi: nesër, para agimit, do ta ndiqte.",
      "And he decided: tomorrow, before dawn, he would follow him."),
-    (588, "woman", "Allahu të shpërbleftë, o i panjohur. Allahu të shpërbleftë.",
+    (586, "woman", "Allahu të shpërbleftë, o i panjohur. Allahu të shpërbleftë.",
      "May Allah reward you, stranger. May Allah reward you."),
-    (594.5, "nar", "Çdo mëngjes. Pa asnjë fjalë. Pa asnjë dëshmitar.", "Every morning. Without a word. Without a witness."),
+    (595, "nar", "Çdo mëngjes. Pa asnjë fjalë. Pa asnjë dëshmitar.", "Every morning. Without a word. Without a witness."),
     (613, "umar_w", "Nuk do të garoj kurrë me ty në mirësi.", "I will never be able to outdo you in goodness."),
     (652, "nar", "Kaluan vite. Dhe një ditë, Ebu Bekri u kthye te Zoti i tij.",
      "Years passed. And one day, Abu Bakr returned to his Lord."),
-    (678, "woman", "Këto hurma nuk janë si ato të tjerat… Kush je ti?", "These dates are not like the others… Who are you?"),
+    (677, "woman", "Këto hurma nuk janë si ato të tjerat… Kush je ti?", "These dates are not like the others… Who are you?"),
     (685.5, "umar", "Ai që vinte para meje… ka shkuar te Allahu.", "The one who came before me… has gone to Allah."),
-    (691.5, "woman", "Ai ishte Ebu Bekri… apo jo?", "It was Abu Bakr… wasn't it?"),
-    (696, "umar", "Po, nënë. Ai ishte.", "Yes, mother. It was him."),
+    (692, "woman", "Ai ishte Ebu Bekri… apo jo?", "It was Abu Bakr… wasn't it?"),
+    (697.5, "umar", "Po, nënë. Ai ishte.", "Yes, mother. It was him."),
     (714, "sub", "", "Do good in secret."),
 ]
 
@@ -374,15 +374,22 @@ def main(outdir):
         a, b = int((start - 0.4) * SR), int((end + 0.6) * SR)
         duck[max(0, a):min(n, b)] = 1
         print(f"{start:7.1f} {key:7s} {dur:5.1f}s  {sq[:60]}")
-    # check overlaps
-    for (s1, e1, *_), (s2, *_r) in zip(subs, subs[1:]):
-        if e1 > s2:
-            print("WARNING overlap", s1, s2)
+    # keep subtitles from overlapping
+    for i in range(len(subs) - 1):
+        s1, e1, a1, b1 = subs[i]
+        if e1 > subs[i + 1][0] - 0.05:
+            subs[i] = (s1, subs[i + 1][0] - 0.05, a1, b1)
     # smooth ducking
     k = int(0.3 * SR)
     duck = np.convolve(duck, np.ones(k) / k, mode="same")
-    music = nasheed()
-    amb = ambience()
+    cache = os.path.join(tmp, "music_amb.npz")
+    if os.path.exists(cache):
+        z = np.load(cache)
+        music, amb = z["music"], z["amb"]
+    else:
+        music = nasheed()
+        amb = ambience()
+        np.savez(cache, music=music, amb=amb)
     mg = (1 - 0.6 * duck)[:, None]
     mix = 0.33 * music * mg + amb + 0.9 * np.stack([vtrack, vtrack], 1)
     # silence at the woman's question (music stops) handled by segments; master fade in/out
